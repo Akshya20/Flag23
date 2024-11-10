@@ -26,7 +26,7 @@ function Countries(){
     const [countries,setcountries]=useState([])
     console.log(countries);
     useEffect(() =>{
-        fetch(API_ENDPOINT).then(res => res.json()).then(data => setcountries(data)).catch((error)=> console.log(error),"Error fetching data: ")
+        fetch(API_ENDPOINT).then(res => res.json()).then(data => setcountries(data)).catch((error)=> console.log("Error fetching data: ",error));
     },[])
     return (
         <div style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
